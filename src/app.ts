@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
 import { healthRouter } from './routes/health';
+import { playerRouter } from './routes/player';
 
 class App {
   constructor() {
@@ -20,6 +21,7 @@ class App {
 
   private routes(): void {
     this.app.use('/health', healthRouter);
+    this.app.use('/player', playerRouter);
   }
 }
 
