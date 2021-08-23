@@ -3,6 +3,7 @@ import cors from 'cors';
 import express from 'express';
 import { healthRouter } from './routes/health';
 import { playerRouter } from './routes/player';
+import { questionRouter } from './routes/question';
 
 class App {
   constructor() {
@@ -22,6 +23,7 @@ class App {
   private routes(): void {
     this.app.use('/health', healthRouter);
     this.app.use('/player', playerRouter);
+    this.app.use('/question', questionRouter);
   }
 }
 
