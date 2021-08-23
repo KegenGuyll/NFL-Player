@@ -4,7 +4,7 @@ import { getPlayerByIdService } from '../../services/player/getPlayerById.servic
 export const getPlayerByIdController = async (req: Request, res: Response) => {
   const id = req.params.id;
 
-  if (!id) throw new Error('not a vaild player ID');
+  if (!id) throw new Error('not a valid player ID');
 
   try {
     const player = await getPlayerByIdService(id);
